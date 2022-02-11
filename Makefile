@@ -6,7 +6,7 @@
 #    By: dirony <dirony@student.21-school.ru>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 20:08:26 by dirony            #+#    #+#              #
-#    Updated: 2022/01/22 15:54:17 by dirony           ###   ########.fr        #
+#    Updated: 2022/01/29 15:00:50 by dirony           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,21 +14,21 @@ NAME = philo
 
 NAME_B = philo_bonus
 
-HEADER = philo.h
+HEADER = src/philo/philo.h
 
-HEADER_B = bonus/philo_bonus.h 
+HEADER_B = src/philo_bonus/philo_bonus.h 
 
-SRC = 		main.c							number_utils.c\
-			utils.c							parse_utils.c\
-			life_cycle_utils.c
+SRC = 		src/philo/main.c					src/philo/life_cycle_utils.c\
+			src/philo/utils.c					src/philo/parse_utils.c
 			
-SRC_BONUS = bonus/main_bonus.c					bonus/list_utils_bonus.c\
+SRC_BONUS = src/philo_bonus/main_bonus.c		src/philo_bonus/life_cycle_utils_bonus.c\
+			src/philo_bonus/utils_bonus.c		src/philo_bonus/parse_utils_bonus.c
 										
 OBJ = ${SRC:.c=.o}
 
 OBJ_BONUS = ${SRC_BONUS:.c=.o}
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 
 COMPILE = gcc $(CFLAGS)
 
